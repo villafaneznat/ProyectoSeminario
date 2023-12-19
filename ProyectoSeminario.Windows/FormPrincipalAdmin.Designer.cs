@@ -40,11 +40,13 @@
             this.PanelTopLabel = new System.Windows.Forms.Label();
             this.PanelTopIconPicture = new FontAwesome.Sharp.IconPictureBox();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelTopIconPicture)).BeginInit();
+            this.PanelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -242,11 +244,25 @@
             // 
             // PanelPrincipal
             // 
+            this.PanelPrincipal.BackColor = System.Drawing.Color.White;
+            this.PanelPrincipal.Controls.Add(this.label1);
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPrincipal.Location = new System.Drawing.Point(220, 65);
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(788, 511);
             this.PanelPrincipal.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(88)))), ((int)(((byte)(115)))));
+            this.label1.Location = new System.Drawing.Point(193, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(434, 89);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "¡Bienvenido!";
             // 
             // FormPrincipalAdmin
             // 
@@ -269,6 +285,8 @@
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelTopIconPicture)).EndInit();
+            this.PanelPrincipal.ResumeLayout(false);
+            this.PanelPrincipal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -287,5 +305,6 @@
         private System.Windows.Forms.Label PanelTopLabel;
         private FontAwesome.Sharp.IconPictureBox PanelTopIconPicture;
         private System.Windows.Forms.Panel PanelPrincipal;
+        private System.Windows.Forms.Label label1;
     }
 }

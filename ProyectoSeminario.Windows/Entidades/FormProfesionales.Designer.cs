@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.FlowLayoutPanelProfesionales = new System.Windows.Forms.FlowLayoutPanel();
             this.PanelNombreUser = new System.Windows.Forms.Panel();
             this.txtBuscarProfesional = new System.Windows.Forms.TextBox();
@@ -38,13 +37,6 @@
             this.PanelNombreUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconPictureUser)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // FlowLayoutPanelProfesionales
             // 
@@ -138,7 +130,6 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPanelProfesionales;
         private FontAwesome.Sharp.IconButton AgregarProfesionalButton;
         private System.Windows.Forms.Panel PanelNombreUser;

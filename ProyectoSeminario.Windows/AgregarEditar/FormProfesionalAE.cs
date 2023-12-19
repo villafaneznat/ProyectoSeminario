@@ -209,8 +209,8 @@ namespace ProyectoSeminario.Windows.Agregar
             
             return valido;
         }
+
         //FALTA ACOMODAR LA ESTETICA DEL FRM AE
-        //FALTA HACER LA BUSQUEDA
         private void InicializarControles()
         {
             txtNombreProfesional.Text = "";

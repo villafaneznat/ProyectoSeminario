@@ -59,9 +59,17 @@ namespace ProyectoSeminario.Datos
                                 {
                                     IdUser = reader.GetInt32(0),
                                     UserName = reader.GetString(1),
-                                    Password = reader.GetString(2),
-                                    IdRol = reader.GetInt32(3)
+                                    Password = reader.GetString(2)
                                 };
+                                if (reader.GetInt32(3) == 1)
+                                {
+                                    usuario.Rol = Rol.Administrador;
+                                }
+                                else
+                                {
+                                    usuario.Rol = Rol.Profesional;
+
+                                }
 
                                 lista.Add(usuario);
                             }
@@ -94,7 +102,8 @@ namespace ProyectoSeminario.Datos
                     using (var comando = new SqlCommand(query, con))
                     {
                         comando.Parameters.Add("@IdRol", SqlDbType.Int);
-                        comando.Parameters["@IdRol"].Value = user.IdRol;
+
+                        comando.Parameters["@IdRol"].Value = Convert.ToInt32(user.Rol);
 
                         comando.Parameters.AddWithValue("@IdTipoEntidad", (int)entidad);
 

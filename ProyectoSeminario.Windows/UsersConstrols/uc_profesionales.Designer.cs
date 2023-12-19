@@ -38,8 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BorrarProfesionalBtn = new FontAwesome.Sharp.IconButton();
             this.LblApellido = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.EditarProfesionalesBtn = new FontAwesome.Sharp.IconButton();
             this.LblProfesion = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -157,16 +155,6 @@
             this.LblApellido.Text = "Apellido";
             this.LblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 0;
-            this.bunifuElipse1.TargetControl = this.BorrarProfesionalBtn;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 0;
-            this.bunifuElipse2.TargetControl = this.EditarProfesionalesBtn;
-            // 
             // EditarProfesionalesBtn
             // 
             this.EditarProfesionalesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
@@ -273,8 +261,6 @@
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton BorrarProfesionalBtn;
         private System.Windows.Forms.Label LblApellido;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private FontAwesome.Sharp.IconButton EditarProfesionalesBtn;
         private System.Windows.Forms.Label LblProfesion;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

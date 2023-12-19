@@ -1,5 +1,4 @@
-﻿using Bunifu.UI.WinForms;
-using ProyectoSeminario.Entidades;
+﻿using ProyectoSeminario.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
