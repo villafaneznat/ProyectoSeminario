@@ -45,12 +45,9 @@ namespace ProyectoSeminario.Windows.AgregarEditar
                 {
                     user = new Usuario();
                 }
-                //profesional.Nombre = txtNombreProfesional.Text;
-                //profesional.Apellido = txtApellidoProfesional.Text;
-                //profesional.DNI = int.Parse(txtDNIProfesional.Text);
-                //profesional.NroMatricula = int.Parse(txtMatriculaProfesional.Text);
-                //profesional.Profesiones = ObtenerProfesiones();
-                //profesional.Firma = ObtenerFirma();
+                user.UserName = UserNameTXT.Text;
+                user.Password = PassTXT.Text;
+                user.Rol = ObtenerRol();
                 try
                 {
 
@@ -58,45 +55,96 @@ namespace ProyectoSeminario.Windows.AgregarEditar
                     {
                         _servicioUsuarios.Guardar(user);
 
-                        if (!esEdicion)
-                        {
-                            MessageBox.Show("Registro agregado",
-                        "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            DialogResult dr = MessageBox.Show("¿Desea agregar otro registro?",
-                                "Pregunta",
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                                MessageBoxDefaultButton.Button2);
-                            if (dr == DialogResult.No)
-                            {
-                                DialogResult = DialogResult.OK;
+                        //        if (!esEdicion)
+                        //        {
+                        //            MessageBox.Show("Registro agregado",
+                        //        "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //            DialogResult dr = MessageBox.Show("¿Desea agregar otro registro?",
+                        //                "Pregunta",
+                        //                MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                        //                MessageBoxDefaultButton.Button2);
+                        //            if (dr == DialogResult.No)
+                        //            {
+                        //                DialogResult = DialogResult.OK;
 
-                            }
-                            user = null;
-                            //InicializarControles();
+                        //            }
+                        //            user = null;
+                        //            //InicializarControles();
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Registro editado", "Mensaje",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            DialogResult = DialogResult.OK;
-                        }
+                        //        }
+                        //        else
+                        //        {
+                        //            MessageBox.Show("Registro editado", "Mensaje",
+                        //                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //            DialogResult = DialogResult.OK;
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        MessageBox.Show("Registro duplicado",
+                        //            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //        user = null;
+                        //    }
+                        //}
+                        //catch (Exception ex)
+                        //{
+
+                        //    MessageBox.Show(ex.Message,
+                        //        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
-                    else
-                    {
-                        MessageBox.Show("Registro duplicado",
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        user = null;
-                    }
-                }
-                catch (Exception ex)
-                {
 
-                    MessageBox.Show(ex.Message,
-                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
+
             }
+        }
+        private Rol ObtenerRol()
+        {
+            Rol rol;
+            if (AdministradorRadioButton.Checked)
+            {
+                rol = Rol.Administrador;
+            }
+            else 
+            { 
+                rol = Rol.Profesional; 
+            }
+
+            return rol;
+        }
+
+        private bool ValidarDatos()
+        {
+            bool valido = true;
+
+            if (string.IsNullOrEmpty(UserNameTXT.Text))
+            {
+                valido = false;
+                MessageBox.Show("Debe ingresar un nombre de usuario, por favor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (string.IsNullOrEmpty(PassTXT.Text))
+            {
+                valido = false;
+                MessageBox.Show("Debe ingresar una contraseña, por favor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (PassTXT.Text.Length < 4)
+            {
+                valido = false;
+                MessageBox.Show("la contraseña debe tener al menos 4 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (!AdministradorRadioButton.Checked && !ProfesionalRadioButton.Checked)
+            {
+                valido = false;
+                MessageBox.Show("Debe seleccionar un rol, por favor verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return valido;
+        }
+
+        private void CancelarBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

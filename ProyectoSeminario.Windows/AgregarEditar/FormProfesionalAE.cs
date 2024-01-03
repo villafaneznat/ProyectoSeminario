@@ -21,11 +21,13 @@ namespace ProyectoSeminario.Windows.Agregar
         private Profesional profesional;
 
         private bool esEdicion = false;
+
         public FormProfesionalAE(IServicioProfesionales servicio)
         {
             InitializeComponent();
             _servicioProfesionales = servicio;
         }
+
         public FormProfesionalAE(IServicioProfesionales servicio,Profesional prof, bool edicion) : this (servicio)
         {
             profesional = prof;

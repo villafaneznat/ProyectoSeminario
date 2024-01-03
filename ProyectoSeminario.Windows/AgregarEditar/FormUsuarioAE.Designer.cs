@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.GuardarBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CancelarBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.UserNameTXT = new System.Windows.Forms.TextBox();
+            this.PassTXT = new System.Windows.Forms.TextBox();
+            this.AdministradorRadioButton = new System.Windows.Forms.RadioButton();
+            this.ProfesionalRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // GuardarBtn
@@ -49,14 +49,15 @@
             this.GuardarBtn.UseVisualStyleBackColor = true;
             this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
             // 
-            // button2
+            // CancelarBtn
             // 
-            this.button2.Location = new System.Drawing.Point(195, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelarBtn.Location = new System.Drawing.Point(195, 235);
+            this.CancelarBtn.Name = "CancelarBtn";
+            this.CancelarBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelarBtn.TabIndex = 1;
+            this.CancelarBtn.Text = "Cancelar";
+            this.CancelarBtn.UseVisualStyleBackColor = true;
+            this.CancelarBtn.Click += new System.EventHandler(this.CancelarBtn_Click);
             // 
             // label1
             // 
@@ -85,55 +86,55 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Rol:";
             // 
-            // textBox1
+            // UserNameTXT
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.UserNameTXT.Location = new System.Drawing.Point(153, 55);
+            this.UserNameTXT.Name = "UserNameTXT";
+            this.UserNameTXT.Size = new System.Drawing.Size(100, 20);
+            this.UserNameTXT.TabIndex = 5;
             // 
-            // textBox2
+            // PassTXT
             // 
-            this.textBox2.Location = new System.Drawing.Point(116, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.PassTXT.Location = new System.Drawing.Point(116, 94);
+            this.PassTXT.Name = "PassTXT";
+            this.PassTXT.Size = new System.Drawing.Size(100, 20);
+            this.PassTXT.TabIndex = 6;
             // 
-            // radioButton1
+            // AdministradorRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(78, 134);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.AdministradorRadioButton.AutoSize = true;
+            this.AdministradorRadioButton.Location = new System.Drawing.Point(78, 134);
+            this.AdministradorRadioButton.Name = "AdministradorRadioButton";
+            this.AdministradorRadioButton.Size = new System.Drawing.Size(88, 17);
+            this.AdministradorRadioButton.TabIndex = 7;
+            this.AdministradorRadioButton.TabStop = true;
+            this.AdministradorRadioButton.Text = "Administrador";
+            this.AdministradorRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // ProfesionalRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(78, 157);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 8;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.ProfesionalRadioButton.AutoSize = true;
+            this.ProfesionalRadioButton.Location = new System.Drawing.Point(78, 157);
+            this.ProfesionalRadioButton.Name = "ProfesionalRadioButton";
+            this.ProfesionalRadioButton.Size = new System.Drawing.Size(77, 17);
+            this.ProfesionalRadioButton.TabIndex = 8;
+            this.ProfesionalRadioButton.TabStop = true;
+            this.ProfesionalRadioButton.Text = "Profesional";
+            this.ProfesionalRadioButton.UseVisualStyleBackColor = true;
             // 
             // FormUsuarioAE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 312);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ProfesionalRadioButton);
+            this.Controls.Add(this.AdministradorRadioButton);
+            this.Controls.Add(this.PassTXT);
+            this.Controls.Add(this.UserNameTXT);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.CancelarBtn);
             this.Controls.Add(this.GuardarBtn);
             this.Name = "FormUsuarioAE";
             this.ResumeLayout(false);
@@ -144,13 +145,13 @@
         #endregion
 
         private System.Windows.Forms.Button GuardarBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CancelarBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox UserNameTXT;
+        private System.Windows.Forms.TextBox PassTXT;
+        private System.Windows.Forms.RadioButton AdministradorRadioButton;
+        private System.Windows.Forms.RadioButton ProfesionalRadioButton;
     }
 }
